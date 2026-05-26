@@ -1,0 +1,7 @@
+mode = 2
+input_image = ../images/Car.bmp
+encrypt_image = ../enc/Car.bmp
+text_to_hide = Тест
+use_red = 0
+use_green = 1
+use_blue = 1 
