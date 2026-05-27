@@ -4,7 +4,7 @@ int main() {
     log_info("INFO", "Запуск программы", "");
 
     confit_t config;
-    if (!load_config("config.txt", &config)) {
+    if (!load_config("../config.txt", &config)) {
         log_info("ERROR", "Ошибка структуры конфига или файл config.txt не найден", "");
         return 1;
     }

@@ -86,6 +86,7 @@ void encrypt(confit_t config) {
 
     if (required_bits > available_bytes) {
         log_info("ERROR", "Переполнение! Текст слишком большой для выбранных каналов", "");
+        free(pixels_buffer);
         return;
     }
 
