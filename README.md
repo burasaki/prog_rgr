@@ -9,7 +9,7 @@
 - [tests/test.c](tests/test.c) — модульные тесты на CMocka.
 - [CMakeLists.txt](CMakeLists.txt) — конфигурационный файл для сборки проекта.
 - [config.txt](config.txt) - Конфигурация программы
-
+- images/ - примеры BMP изображений
 ## Конфигурация приложения
 ```
 mode = 1
