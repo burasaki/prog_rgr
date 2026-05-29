@@ -16,7 +16,7 @@ void log_info(char* level, char* message, const char* details) {
     fclose(log_infoFile);
 }
 
-int load_config(const char* filename, confit_t* config) {
+int load_config(const char* filename, config_t* config) {
     FILE* f = fopen(filename, "r");
     if (!f) return 0;
 
@@ -41,14 +41,14 @@ int load_config(const char* filename, confit_t* config) {
     return (read_count == 7);
 }
 
-int is_channel_active(int channel_index, confit_t config) {
+int is_channel_active(int channel_index, config_t config) {
     if (channel_index == 0 && config.use_blue)  return 1;
     if (channel_index == 1 && config.use_green) return 1;
     if (channel_index == 2 && config.use_red)   return 1;
     return 0;
 }
 
-void encrypt(confit_t config) {
+void encrypt(config_t config) {
     log_info("INFO", "Старт шифрования", "");
     
     FILE *inFile = fopen(config.input_image, "rb");
@@ -128,7 +128,7 @@ void encrypt(confit_t config) {
     fclose(outFile);
 }
 
-void decrypt(confit_t config) {
+void decrypt(config_t config) {
     log_info("INFO", "Старт дешифрования", "");
 
     FILE *inFile = fopen(config.output_image, "rb");

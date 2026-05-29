@@ -35,10 +35,10 @@ typedef struct {
     int use_red;
     int use_green;
     int use_blue;
-} confit_t;
+} config_t;
 
 void log_info(char* level, char* message, const char* details);
-int load_config(const char* filename, confit_t* config);
-int is_channel_active(int channel_index, confit_t config);
-void encrypt(confit_t config);
-void decrypt(confit_t config);
+int load_config(const char* filename, config_t* config);
+int is_channel_active(int channel_index, config_t config);
+void encrypt(config_t config);
+void decrypt(config_t config);
